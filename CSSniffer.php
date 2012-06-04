@@ -138,4 +138,3 @@ function theme_options_validate( $input ) {
 
 function theme_options_add_page() {	add_theme_page( __( 'CSSniffer', 'cssniffertheme' ), __( 'CSSniffer', 'cssniffertheme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );}
 function theme_options_init(){register_setting( 'cssniffer_options', 'cssniffer_theme_options', 'theme_options_validate' );}
-?>
