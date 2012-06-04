@@ -87,15 +87,9 @@ function theme_options_do_page() {
 
 			<table class="form-table">
 
-
 				<tr valign="top"><th scope="row"><?php _e( 'Firefox Specific CSS', 'cssniffertheme' ); ?></th>
 					<td>
 						<textarea id="cssniffer_theme_options[firefox]" class="large-text" cols="50" rows="10" name="cssniffer_theme_options[firefox]"><?php echo esc_textarea( $options['firefox'] ); ?></textarea>
-					</td>
-				</tr>
-				<tr valign="top"><th scope="row"><?php _e( 'Webkit Specific CSS', 'cssniffertheme' ); ?></th>
-					<td>
-						<textarea id="cssniffer_theme_options[webkit]" class="large-text" cols="50" rows="10" name="cssniffer_theme_options[webkit]"><?php echo esc_textarea( $options['webkit'] ); ?></textarea>
 					</td>
 				</tr>
 				<tr valign="top"><th scope="row"><?php _e( 'Internet Explorer Specific CSS', 'cssniffertheme' ); ?></th>
@@ -103,16 +97,21 @@ function theme_options_do_page() {
 						<textarea id="cssniffer_theme_options[grossitsie]" class="large-text" cols="50" rows="10" name="cssniffer_theme_options[grossitsie]"><?php echo esc_textarea( $options['grossitsie'] ); ?></textarea>
 					</td>
 				</tr>
-				<tr valign="top"><th scope="row"><?php _e( 'Opera Specific CSS', 'cssniffertheme' ); ?></th>
-					<td>
-						<textarea id="cssniffer_theme_options[opera]" class="large-text" cols="50" rows="10" name="cssniffer_theme_options[opera]"><?php echo esc_textarea( $options['opera'] ); ?></textarea>
-					</td>
-				</tr>	
 				<tr valign="top"><th scope="row"><?php _e( 'iPhone Specific CSS', 'cssniffertheme' ); ?></th>
 					<td>
 						<textarea id="cssniffer_theme_options[iphone]" class="large-text" cols="50" rows="10" name="cssniffer_theme_options[iphone]"><?php echo esc_textarea( $options['iphone'] ); ?></textarea>
 					</td>
+				</tr>				
+				<tr valign="top"><th scope="row"><?php _e( 'Opera Specific CSS', 'cssniffertheme' ); ?></th>
+					<td>
+						<textarea id="cssniffer_theme_options[opera]" class="large-text" cols="50" rows="10" name="cssniffer_theme_options[opera]"><?php echo esc_textarea( $options['opera'] ); ?></textarea>
+					</td>
 				</tr>
+				<tr valign="top"><th scope="row"><?php _e( 'Webkit Specific CSS', 'cssniffertheme' ); ?></th>
+					<td>
+						<textarea id="cssniffer_theme_options[webkit]" class="large-text" cols="50" rows="10" name="cssniffer_theme_options[webkit]"><?php echo esc_textarea( $options['webkit'] ); ?></textarea>
+					</td>
+				</tr>				
 
 			</table>
 			<p class="submit">
@@ -133,8 +132,6 @@ function theme_options_validate( $input ) {
 
 	return $input;
 }
-
-
 
 function theme_options_add_page() {	add_theme_page( __( 'CSSniffer', 'cssniffertheme' ), __( 'CSSniffer', 'cssniffertheme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );}
 function theme_options_init(){register_setting( 'cssniffer_options', 'cssniffer_theme_options', 'theme_options_validate' );}
