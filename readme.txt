@@ -1,6 +1,6 @@
 === CSSniffer ===
 Contributors: bradparbs
-Donate link: http://onyourmark.com/
+Donate link: http://bradparbs.com/
 Tags: css, browser, development
 Requires at least: 2.0.2
 Tested up to: 3.3
